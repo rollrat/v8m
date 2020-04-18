@@ -2191,6 +2191,7 @@ MaybeHandle<SharedFunctionInfo> Compiler::GetSharedFunctionInfoForScript(
     ScriptOriginOptions origin_options, v8::Extension* extension,
     ScriptData* cached_data, ScriptCompiler::CompileOptions compile_options,
     ScriptCompiler::NoCacheReason no_cache_reason, NativesFlag natives) {
+  // compile entry
   ScriptCompileTimerScope compile_timer(isolate, no_cache_reason);
 
   if (compile_options == ScriptCompiler::kNoCompileOptions ||
